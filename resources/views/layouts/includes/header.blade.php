@@ -1,8 +1,8 @@
 <!-- Navbar -->
 <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
     <div class="container">
-        <a class="navbar-brand mr-lg-5" href="./index.html">
-            <img src="./assets/img/brand/white.png">
+        <a class="navbar-brand mr-lg-5" href="#">
+            <img src="{{ asset('img/brand/ga-mono.png') }}">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -12,7 +12,7 @@
                 <div class="row">
                     <div class="col-6 collapse-brand">
                         <a href="./index.html">
-                            <img src="{{ asset('img/brand/blue.png') }}">
+                            <img src="{{ asset('img/brand/ga-mono.png') }}">
                         </a>
                     </div>
                     <div class="col-6 collapse-close">
@@ -92,7 +92,7 @@
                         <span class="btn-inner--icon">
                             <i class="fas fa-coffee"></i>
                         </span>
-                        <span class="nav-link-inner--text">Buy me a coffee</span>
+                        <span class="nav-link-inner--text">{{__("website.buy_me_a_coffee")}}</span>
                     </a>
                 </li>
             </ul>
