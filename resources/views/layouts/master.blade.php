@@ -7,7 +7,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="./assets/img/favicon.png">
     <title>
-        Argon Design System by Creative Tim
+        Guilherme Albert
     </title>
     @include('layouts.includes.assets.fonts')
     @include('layouts.includes.assets.icons')

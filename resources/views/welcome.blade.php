@@ -19,21 +19,21 @@
             <div class="col px-0">
                 <div class="row align-items-center justify-content-center">
                     <div class="col-lg-6 text-center">
-                        <img src="./assets/img/brand/white.png" style="width: 200px;" class="img-fluid">
+                        <img src="{{ asset('img/brand/white.png') }}" style="width: 200px;" class="img-fluid">
                         <p class="lead text-white">A beautiful Design System for Bootstrap 4. It's Free and Open Source.</p>
                         <div class="btn-wrapper mt-5">
-                            <a href="https://www.creative-tim.com/product/argon-design-system" class="btn btn-lg btn-white btn-icon mb-3 mb-sm-0">
+                            <a href="#" class="btn btn-lg btn-white btn-icon mb-3 mb-sm-0">
                                 <span class="btn-inner--icon"><i class="ni ni-cloud-download-95"></i></span>
                                 <span class="btn-inner--text">Download HTML</span>
                             </a>
-                            <a href="https://github.com/creativetimofficial/argon-design-system" class="btn btn-lg btn-github btn-icon mb-3 mb-sm-0" target="_blank">
+                            <a href="#" class="btn btn-lg btn-github btn-icon mb-3 mb-sm-0" target="_blank">
                                 <span class="btn-inner--icon"><i class="fa fa-github"></i></span>
                                 <span class="btn-inner--text"><span class="text-warning">Star us</span> on Github</span>
                             </a>
                         </div>
                         <div class="mt-5">
                             <small class="font-weight-bold mb-0 mr-2 text-white">*proudly coded by</small>
-                            <img src="./assets/img/brand/creativetim-white-slim.png" style="height: 28px;">
+                            <img src="{{ asset('img/brand/creativetim-white-slim.png') }}" style="height: 28px;">
                         </div>
                     </div>
                 </div>
@@ -391,7 +391,7 @@
                                         <div class="row">
                                             <div class="col-6 collapse-brand">
                                                 <a href="./index.html">
-                                                    <img src="./assets/img/brand/blue.png">
+                                                    <img src="{{ asset('img/brand/blue.png') }}">
                                                 </a>
                                             </div>
                                             <div class="col-6 collapse-close">
@@ -440,7 +440,7 @@
                                         <div class="row">
                                             <div class="col-6 collapse-brand">
                                                 <a href="./index.html">
-                                                    <img src="./assets/img/brand/blue.png">
+                                                    <img src="{{ asset('img/brand/blue.png') }}">
                                                 </a>
                                             </div>
                                             <div class="col-6 collapse-close">
@@ -505,7 +505,7 @@
                     <div class="row">
                         <div class="col-6 collapse-brand">
                             <a href="./index.html">
-                                <img src="./assets/img/brand/blue.png">
+                                <img src="{{ asset('img/brand/blue.png') }}">
                             </a>
                         </div>
                         <div class="col-6 collapse-close">
@@ -557,7 +557,7 @@
                     <div class="row">
                         <div class="col-6 collapse-brand">
                             <a href="./index.html">
-                                <img src="./assets/img/brand/blue.png">
+                                <img src="{{ asset('img/brand/blue.png') }}">
                             </a>
                         </div>
                         <div class="col-6 collapse-close">
@@ -602,7 +602,7 @@
                     <div class="row">
                         <div class="col-6 collapse-brand">
                             <a href="./index.html">
-                                <img src="./assets/img/brand/blue.png">
+                                <img src="{{ asset('img/brand/blue.png') }}">
                             </a>
                         </div>
                         <div class="col-6 collapse-close">
@@ -654,7 +654,7 @@
                     <div class="row">
                         <div class="col-6 collapse-brand">
                             <a href="./index.html">
-                                <img src="./assets/img/brand/blue.png">
+                                <img src="{{ asset('img/brand/blue.png') }}">
                             </a>
                         </div>
                         <div class="col-6 collapse-close">
@@ -706,7 +706,7 @@
                     <div class="row">
                         <div class="col-6 collapse-brand">
                             <a href="./index.html">
-                                <img src="./assets/img/brand/blue.png">
+                                <img src="{{ asset('img/brand/blue.png') }}">
                             </a>
                         </div>
                         <div class="col-6 collapse-close">
@@ -752,7 +752,7 @@
                     <div class="row">
                         <div class="col-6 collapse-brand">
                             <a href="./index.html">
-                                <img src="./assets/img/brand/blue.png">
+                                <img src="{{ asset('img/brand/blue.png') }}">
                             </a>
                         </div>
                         <div class="col-6 collapse-close">
@@ -1207,19 +1207,19 @@
         <div class="row">
             <div class="col-sm-3 col-6">
                 <small class="d-block text-uppercase font-weight-bold mb-4">Image</small>
-                <img src="./assets/img/faces/team-1.jpg" alt="Rounded image" class="img-fluid rounded shadow" style="width: 150px;">
+                <img src="{{ asset('img/faces/team-1.jpg') }}" alt="Rounded image" class="img-fluid rounded shadow" style="width: 150px;">
             </div>
             <div class="col-sm-3 col-6">
                 <small class="d-block text-uppercase font-weight-bold mb-4">Circle Image</small>
-                <img src="./assets/img/faces/team-2.jpg" alt="Circle image" class="img-fluid rounded-circle shadow" style="width: 150px;">
+                <img src="{{ asset('img/faces/team-2.jpg') }}" alt="Circle image" class="img-fluid rounded-circle shadow" style="width: 150px;">
             </div>
             <div class="col-sm-3 col-6 mt-5 mt-sm-0">
                 <small class="d-block text-uppercase font-weight-bold mb-4">Raised</small>
-                <img src="./assets/img/faces/team-3.jpg" alt="Raised image" class="img-fluid rounded shadow-lg" style="width: 150px;">
+                <img src="{{ asset('img/faces/team-3.jpg') }}" alt="Raised image" class="img-fluid rounded shadow-lg" style="width: 150px;">
             </div>
             <div class="col-sm-3 col-6 mt-5 mt-sm-0">
                 <small class="d-block text-uppercase font-weight-bold mb-4">Circle Raised</small>
-                <img src="./assets/img/faces/team-4.jpg" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 150px;">
+                <img src="{{ asset('img/faces/team-4.jpg') }}" alt="Raised circle image" class="img-fluid rounded-circle shadow-lg" style="width: 150px;">
             </div>
         </div>
         <div class="row mt-5">
@@ -1227,35 +1227,35 @@
                 <small class="d-block text-uppercase font-weight-bold mb-4">Avatar group</small>
                 <div class="avatar-group">
                     <a href="javascript:;" class="avatar avatar-lg rounded-circle" data-toggle="tooltip" data-original-title="Ryan Tompson">
-                        <img alt="Image placeholder" src="./assets/img/faces/team-1.jpg">
+                        <img alt="Image placeholder" src="{{ asset('img/faces/team-1.jpg') }}">
                     </a>
                     <a href="javascript:;" class="avatar avatar-lg rounded-circle" data-toggle="tooltip" data-original-title="Romina Hadid">
-                        <img alt="Image placeholder" src="./assets/img/faces/team-2.jpg">
+                        <img alt="Image placeholder" src="{{ asset('img/faces/team-2.jpg') }}">
                     </a>
                     <a href="javascript:;" class="avatar avatar-lg rounded-circle" data-toggle="tooltip" data-original-title="Alexander Smith">
-                        <img alt="Image placeholder" src="./assets/img/faces/team-3.jpg">
+                        <img alt="Image placeholder" src="{{ asset('img/faces/team-3.jpg') }}">
                     </a>
                     <a href="javascript:;" class="avatar avatar-lg rounded-circle" data-toggle="tooltip" data-original-title="Jessica Doe">
-                        <img alt="Image placeholder" src="./assets/img/faces/team-4.jpg">
+                        <img alt="Image placeholder" src="{{ asset('img/faces/team-4.jpg') }}">
                     </a>
                 </div>
             </div>
             <div class="col-sm-6 col-6">
                 <small class="d-block text-uppercase font-weight-bold mb-4">Sizing</small>
                 <a href="javascript:;" class="avatar avatar-xs rounded-circle">
-                    <img alt="Image placeholder" src="./assets/img/faces/team-4.jpg">
+                    <img alt="Image placeholder" src="{{ asset('img/faces/team-4.jpg') }}">
                 </a>
                 <a href="javascript:;" class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="./assets/img/faces/team-4.jpg">
+                    <img alt="Image placeholder" src="{{ asset('img/faces/team-4.jpg') }}">
                 </a>
                 <a href="javascript:;" class="avatar rounded-circle">
-                    <img alt="Image placeholder" src="./assets/img/faces/team-4.jpg">
+                    <img alt="Image placeholder" src="{{ asset('img/faces/team-4.jpg') }}">
                 </a>
                 <a href="javascript:;" class="avatar avatar-lg rounded-circle">
-                    <img alt="Image placeholder" src="./assets/img/faces/team-4.jpg">
+                    <img alt="Image placeholder" src="{{ asset('img/faces/team-4.jpg') }}">
                 </a>
                 <a href="javascript:;" class="avatar avatar-xl rounded-circle">
-                    <img alt="Image placeholder" src="./assets/img/faces/team-4.jpg">
+                    <img alt="Image placeholder" src="{{ asset('img/faces/team-4.jpg') }}">
                 </a>
             </div>
         </div>
@@ -1330,15 +1330,15 @@
                                             <small>Sign in with</small>
                                         </div>
                                         <div class="btn-wrapper text-center">
-                                            <a href="javascript:;" class="btn btn-neutral btn-icon">
+                                            <a href="#" class="btn btn-neutral btn-icon">
                                                 <span class="btn-inner--icon">
-                                                    <img src="./assets/img/icons/common/github.svg">
+                                                    <img src="{{ asset('img/icons/common/github.svg') }}">
                                                 </span>
                                                 <span class="btn-inner--text">Github</span>
                                             </a>
-                                            <a href="javascript:;" class="btn btn-neutral btn-icon">
+                                            <a href="#" class="btn btn-neutral btn-icon">
                                                 <span class="btn-inner--icon">
-                                                    <img src="./assets/img/icons/common/google.svg">
+                                                    <img src="{{ asset('img/icons/common/google.svg') }}">
                                                 </span>
                                                 <span class="btn-inner--text">Google</span>
                                             </a>
@@ -1460,7 +1460,7 @@
         </div>
     </div>
 </div>
-<div class="section" style="background-image: url('./assets/img/ill/1.svg');">
+<div class="section" style="background-image: url('{{ asset("img/ill/1.svg") }}');">
     <div class="container py-md">
         <div class="row justify-content-between align-items-center">
             <div class="col-lg-6 mb-lg-auto">
@@ -1473,13 +1473,13 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img class="img-fluid" src="./assets/img/theme/img-1-1200x1000.jpg" alt="First slide">
+                                <img class="img-fluid" src="{{ asset('img/theme/img-1-1200x1000.jpg') }}" alt="First slide">
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="./assets/img/theme/img-2-1200x1000.jpg" alt="Second slide">
+                                <img class="img-fluid" src="{{ asset('img/theme/img-2-1200x1000.jpg') }}" alt="Second slide">
                             </div>
                             <div class="carousel-item">
-                                <img class="img-fluid" src="./assets/img/theme/img-1-1200x1000.jpg" alt="Third slide">
+                                <img class="img-fluid" src="{{ asset('img/theme/img-1-1200x1000.jpg') }}" alt="Third slide">
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#carousel_example" role="button" data-slide="prev">
@@ -1570,11 +1570,11 @@
                             <div class="text-muted text-center mb-3"><small>Sign in with</small></div>
                             <div class="btn-wrapper text-center">
                                 <a href="#" class="btn btn-neutral btn-icon">
-                                    <span class="btn-inner--icon"><img src="./assets/img/icons/common/github.svg"></span>
+                                    <span class="btn-inner--icon"><img src="{{ asset('img/icons/common/github.svg') }}"></span>
                                     <span class="btn-inner--text">Github</span>
                                 </a>
                                 <a href="#" class="btn btn-neutral btn-icon">
-                                    <span class="btn-inner--icon"><img src="./assets/img/icons/common/google.svg"></span>
+                                    <span class="btn-inner--icon"><img src="{{ asset('img/icons/common/google.svg') }}"></span>
                                     <span class="btn-inner--text">Google</span>
                                 </a>
                             </div>
@@ -1636,32 +1636,32 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-2 col-4">
                             <a href="https://www.creative-tim.com/product/argon-design-system" target="_blank" data-toggle="tooltip" data-original-title="Bootstrap 4 - Most popular front-end component library">
-                                <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/bootstrap.jpg" class="img-fluid">
+                                <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/bootstrap.jpg') }}" class="img-fluid">
                             </a>
                         </div>
                         <div class="col-lg-2 col-4">
                             <a href=" https://www.creative-tim.com/product/vue-argon-design-system" target="_blank" data-toggle="tooltip" data-original-title="Vue.js - The progressive javascript framework">
-                                <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/vue.jpg" class="img-fluid">
+                                <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/vue.jpg') }}" class="img-fluid">
                             </a>
                         </div>
                         <div class="col-lg-2 col-4">
                             <a href=" https://www.creative-tim.com/product/argon-design-system-angular" target="_blank" data-toggle="tooltip" data-original-title="Angular - One framework. Mobile &amp; desktop">
-                                <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/angular.jpg" class="img-fluid">
+                                <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/angular.jpg') }}" class="img-fluid">
                             </a>
                         </div>
                         <div class="col-lg-2 col-4">
                             <a href=" https://www.creative-tim.com/product/argon-design-system-react" target="_blank" data-toggle="tooltip" data-original-title="React - A JavaScript library for building user interfaces">
-                                <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/react.jpg" class="img-fluid">
+                                <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/react.jpg') }}" class="img-fluid">
                             </a>
                         </div>
                         <div class="col-lg-2 col-4">
                             <a href=" https://www.creative-tim.com/product/argon-design-system" target="_blank" data-toggle="tooltip" data-original-title="Sketch - Digital design toolkit">
-                                <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/sketch.jpg" class="img-fluid">
+                                <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/sketch.jpg') }}" class="img-fluid">
                             </a>
                         </div>
                         <div class="col-lg-2 col-4">
                             <a href=" https://www.creative-tim.com/product/argon-design-system" target="_blank" data-toggle="tooltip" data-original-title="Adobe Photoshop - Software for digital images manipulation">
-                                <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/ps.jpg" class="img-fluid">
+                                <img src="https://s3.amazonaws.com/creativetim_bucket/tim_static_images/presentation-page/ps.jpg') }}" class="img-fluid">
                             </a>
                         </div>
                     </div>

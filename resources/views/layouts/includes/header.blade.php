@@ -12,7 +12,7 @@
                 <div class="row">
                     <div class="col-6 collapse-brand">
                         <a href="./index.html">
-                            <img src="./assets/img/brand/blue.png">
+                            <img src="{{ asset('img/brand/blue.png') }}">
                         </a>
                     </div>
                     <div class="col-6 collapse-close">
@@ -76,13 +76,13 @@
             </ul>
             <ul class="navbar-nav align-items-lg-center ml-lg-auto">
                 <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="https://twitter.com/creativetim" target="_blank" data-toggle="tooltip" title="Follow us on Twitter">
+                    <a class="nav-link nav-link-icon" href="#" target="_blank" data-toggle="tooltip" title="Follow us on Twitter">
                         <i class="fa fa-twitter-square"></i>
                         <span class="nav-link-inner--text d-lg-none">Twitter</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="https://github.com/creativetimofficial/argon-design-system" target="_blank" data-toggle="tooltip" title="Star us on Github">
+                    <a class="nav-link nav-link-icon" href="#" target="_blank" data-toggle="tooltip" title="Star us on Github">
                         <i class="fa fa-github"></i>
                         <span class="nav-link-inner--text d-lg-none">Github</span>
                     </a>
@@ -90,9 +90,9 @@
                 <li class="nav-item d-none d-lg-block ml-lg-4">
                     <a href="#" target="_blank" class="btn btn-neutral btn-icon">
                         <span class="btn-inner--icon">
-                            <i class="fa fa-envelope mr-2"></i>
+                            <i class="fas fa-coffee"></i>
                         </span>
-                        <span class="nav-link-inner--text">Pay me a coffee</span>
+                        <span class="nav-link-inner--text">Buy me a coffee</span>
                     </a>
                 </li>
             </ul>
