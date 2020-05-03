@@ -14,7 +14,7 @@
     @include('layouts.includes.assets.css')
 </head>
 
-<body class="index-page">
+<body>
 
     <div id="app" class="app">
         @include('layouts.includes.header')
