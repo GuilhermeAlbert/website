@@ -10,7 +10,7 @@
 <script src="{{ asset('js/plugins/moment.min.js') }}"></script>
 <script src="{{ asset('js/plugins/datetimepicker.js') }}" type="text/javascript"></script>
 <script src="{{ asset('js/plugins/bootstrap-datepicker.min.js') }}"></script>
-<!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
+<!-- Control Center for Guilherme Albert UI Kit: parallax effects, scripts for the example pages etc -->
 <!--  Google Maps Plugin    -->
 <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
 <script src="{{ asset('js/argon-design-system.min.js?v=1.2.0') }}" type="text/javascript"></script>

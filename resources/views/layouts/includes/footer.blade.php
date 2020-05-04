@@ -1,22 +1,5 @@
 <footer class="footer has-cards">
-    <div class="container container-lg">
-        <div class="row">
-            <div class="col-md-6 mb-5 mb-md-0">
-                <div class="card card-lift--hover shadow border-0">
-                    <a href="./examples/landing.html" title="Landing Page">
-                        <img src="./assets/img/theme/landing.jpg" class="card-img">
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-6 mb-5 mb-lg-0">
-                <div class="card card-lift--hover shadow border-0">
-                    <a href="./examples/profile.html" title="Profile Page">
-                        <img src="./assets/img/theme/profile.jpg" class="card-img">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <div class="container">
         <div class="row row-grid align-items-center my-md">
             <div class="col-lg-6">
@@ -42,13 +25,13 @@
         <div class="row align-items-center justify-content-md-between">
             <div class="col-md-6">
                 <div class="copyright">
-                    &copy; 2020 <a href="" target="_blank">Creative Tim</a>.
+                    &copy; 2020 <a href="" target="_blank">Guilherme Albert</a>.
                 </div>
             </div>
             <div class="col-md-6">
                 <ul class="nav nav-footer justify-content-end">
                     <li class="nav-item">
-                        <a href="" class="nav-link" target="_blank">Creative Tim</a>
+                        <a href="" class="nav-link" target="_blank">Guilherme Albert</a>
                     </li>
                     <li class="nav-item">
                         <a href="" class="nav-link" target="_blank">About Us</a>

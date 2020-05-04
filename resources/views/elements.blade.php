@@ -3,7 +3,7 @@
 @section('content')
 <div class="section section-hero section-shaped">
     <div class="shape shape-style-1 shape-primary">
-        <!-- <span class="span-150"></span>
+        <span class="span-150"></span>
         <span class="span-50"></span>
         <span class="span-50"></span>
         <span class="span-75"></span>
@@ -12,7 +12,7 @@
         <span class="span-50"></span>
         <span class="span-100"></span>
         <span class="span-50"></span>
-        <span class="span-100"></span> -->
+        <span class="span-100"></span>
     </div>
     <div class="page-header">
         <div class="container shape-container d-flex align-items-center py-lg">
@@ -23,7 +23,7 @@
                         <p class="lead text-white">
                             {{ __("website.making_some_changes") }}
                         </p>
-                        <!-- <div class="btn-wrapper mt-5">
+                        <div class="btn-wrapper mt-5">
                             <a href="#" class="btn btn-lg btn-white btn-icon mb-3 mb-sm-0">
                                 <span class="btn-inner--icon"><i class="ni ni-cloud-download-95"></i></span>
                                 <span class="btn-inner--text">Download HTML</span>
@@ -32,7 +32,7 @@
                                 <span class="btn-inner--icon"><i class="fa fa-github"></i></span>
                                 <span class="btn-inner--text"><span class="text-warning">Star us</span> on Github</span>
                             </a>
-                        </div> -->
+                        </div>
                         <div class="mt-5">
                             <small class="font-weight-bold mb-0 mr-2 text-white">{{ __("website.powered_by") }}</small>
                             <img src="{{ asset('img/brand/trebla-main-mono.svg') }}" style="height: 28px;">
@@ -1017,7 +1017,7 @@
                 <small class="text-uppercase text-muted font-weight-bold">Heading 1</small>
             </div>
             <div class="col-sm-9">
-                <h1 class="mb-0">Argon Design System PRO</h1>
+                <h1 class="mb-0">Guilherme Albert Design System PRO</h1>
             </div>
         </div>
         <div class="row py-3 align-items-center">
@@ -1025,7 +1025,7 @@
                 <small class="text-uppercase text-muted font-weight-bold">Heading 2</small>
             </div>
             <div class="col-sm-9">
-                <h2 class="mb-0">Argon Design System PRO</h2>
+                <h2 class="mb-0">Guilherme Albert Design System PRO</h2>
             </div>
         </div>
         <div class="row py-3 align-items-center">
@@ -1033,7 +1033,7 @@
                 <small class="text-uppercase text-muted font-weight-bold">Heading 3</small>
             </div>
             <div class="col-sm-9">
-                <h3 class="mb-0">Argon Design System PRO</h3>
+                <h3 class="mb-0">Guilherme Albert Design System PRO</h3>
             </div>
         </div>
         <div class="row py-3 align-items-center">
@@ -1041,7 +1041,7 @@
                 <small class="text-uppercase text-muted font-weight-bold">Heading 4</small>
             </div>
             <div class="col-sm-9">
-                <h4 class="mb-0">Argon Design System PRO</h4>
+                <h4 class="mb-0">Guilherme Albert Design System PRO</h4>
             </div>
         </div>
         <div class="row py-3 align-items-center">
@@ -1049,7 +1049,7 @@
                 <small class="text-uppercase text-muted font-weight-bold">Heading 5</small>
             </div>
             <div class="col-sm-9">
-                <h5 class="mb-0">Argon Design System PRO</h5>
+                <h5 class="mb-0">Guilherme Albert Design System PRO</h5>
             </div>
         </div>
         <div class="row py-3 align-items-center">
@@ -1057,7 +1057,7 @@
                 <small class="text-uppercase text-muted font-weight-bold">Heading 6</small>
             </div>
             <div class="col-sm-9">
-                <h6 class="mb-0">Argon Design System PRO</h6>
+                <h6 class="mb-0">Guilherme Albert Design System PRO</h6>
             </div>
         </div>
         <!-- Display titles -->
@@ -1067,7 +1067,7 @@
                 <small class="text-uppercase text-muted font-weight-bold">Display 1</small>
             </div>
             <div class="col-sm-9">
-                <h1 class="display-1 mb-0">Argon Design System PRO</h1>
+                <h1 class="display-1 mb-0">Guilherme Albert Design System PRO</h1>
             </div>
         </div>
         <div class="row py-3 align-items-center">
@@ -1075,7 +1075,7 @@
                 <small class="text-uppercase text-muted font-weight-bold">Display 2</small>
             </div>
             <div class="col-sm-9">
-                <h2 class="display-2 mb-0">Argon Design System PRO</h2>
+                <h2 class="display-2 mb-0">Guilherme Albert Design System PRO</h2>
             </div>
         </div>
         <div class="row py-3 align-items-center">
@@ -1083,7 +1083,7 @@
                 <small class="text-uppercase text-muted font-weight-bold">Display 3</small>
             </div>
             <div class="col-sm-9">
-                <h3 class="display-3 mb-0">Argon Design System PRO</h3>
+                <h3 class="display-3 mb-0">Guilherme Albert Design System PRO</h3>
             </div>
         </div>
         <div class="row py-3 align-items-center">
@@ -1091,7 +1091,7 @@
                 <small class="text-uppercase text-muted font-weight-bold">Display 4</small>
             </div>
             <div class="col-sm-9">
-                <h4 class="display-4 mb-0">Argon Design System PRO</h4>
+                <h4 class="display-4 mb-0">Guilherme Albert Design System PRO</h4>
             </div>
         </div>
         <!-- Specialized titles -->
@@ -1101,7 +1101,7 @@
                 <small class="text-uppercase text-muted font-weight-bold">Heading</small>
             </div>
             <div class="col-sm-9">
-                <h3 class="heading mb-0">Argon Design System PRO</h3>
+                <h3 class="heading mb-0">Guilherme Albert Design System PRO</h3>
             </div>
         </div>
         <div class="row py-3 align-items-center">
@@ -1109,7 +1109,7 @@
                 <small class="text-uppercase text-muted font-weight-bold">Heading title</small>
             </div>
             <div class="col-sm-9">
-                <h3 class="heading-title text-warning mb-0">Argon Design System PRO</h3>
+                <h3 class="heading-title text-warning mb-0">Guilherme Albert Design System PRO</h3>
             </div>
         </div>
         <div class="row py-3 align-items-center">
@@ -1497,7 +1497,7 @@
             </div>
             <div class="col-lg-5 mb-5 mb-lg-0">
                 <h1 class="font-weight-light">Bootstrap carousel</h1>
-                <p class="lead mt-4">Argon Design System comes with four pre-built pages to help you get started faster. You can change the text and images and you're good to go.</p>
+                <p class="lead mt-4">Guilherme Albert Design System comes with four pre-built pages to help you get started faster. You can change the text and images and you're good to go.</p>
                 <a href="https://demos.creative-tim.com/argon-design-system/docs/components/carousel.html" class="btn btn-white mt-4">See all components</a>
             </div>
         </div>
@@ -1509,7 +1509,7 @@
             <div class="col-lg-8 text-center">
                 <h2 class="display-3">Nucleo Icons</h2>
                 <p class="lead">
-                    The official package contains over 21.000 icons which are looking great in combination with Argon Design System. Make sure you check all of them and use those that you like the most.
+                    The official package contains over 21.000 icons which are looking great in combination with Guilherme Albert Design System. Make sure you check all of them and use those that you like the most.
                 </p>
                 <div class="btn-wrapper">
                     <a href="https://demos.creative-tim.com/argon-design-system/docs/foundation/icons.html" class="btn btn-primary">View demo icons</a>
@@ -1628,7 +1628,7 @@
         <div class="row row-grid justify-content-center">
             <div class="col-lg-8 text-center">
                 <h2 class="display-3">Do you love this awesome <span class="text-success">Design System for Bootstrap 4?</span></h2>
-                <p class="lead">Cause if you do, it can be yours for FREE. Hit the button below to navigate to Creative Tim where you can find the Design System in HTML. Start a new project or give an old Bootstrap project a new look!</p>
+                <p class="lead">Cause if you do, it can be yours for FREE. Hit the button below to navigate to Guilherme Albert where you can find the Design System in HTML. Start a new project or give an old Bootstrap project a new look!</p>
                 <div class="btn-wrapper">
                     <a href="https://www.creative-tim.com/product/argon-design-system" class="btn btn-primary mb-3 mb-sm-0">Download HTML</a>
                     <a href="https://www.creative-tim.com/product/argon-design-system" class="btn btn-default">Download PSD/Sketch</a>

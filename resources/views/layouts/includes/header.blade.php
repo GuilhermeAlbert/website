@@ -1,8 +1,12 @@
 <!-- Navbar -->
-<nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
+<nav id="navbar-main" class="navbar navbar-main navbar-expand-lg @if (Request::is('/')) navbar-transparent @else navbar-default @endif navbar-light headroom">
     <div class="container">
-        <a class="navbar-brand mr-lg-5" href="#">
+        <a class="navbar-brand mr-lg-5" href="/">
+            @if (Request::is('/'))
             <img src="{{ asset('img/brand/ga-mono.png') }}">
+            @else
+            <img src="{{ asset('img/brand/ga-colored.png') }}">
+            @endif
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -24,6 +28,12 @@
                 </div>
             </div>
             <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" href="#">
+                        <i class="ni ni-ui-04 d-lg-none"></i>
+                        <span class="nav-link-inner--text">{{ __('website.about') }}</span>
+                    </a>
+                </li>
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
                         <i class="ni ni-ui-04 d-lg-none"></i>
@@ -61,17 +71,17 @@
                         </div>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
                         <i class="ni ni-collection d-lg-none"></i>
                         <span class="nav-link-inner--text">{{ __('website.projects') }}</span>
                     </a>
-                    <div class="dropdown-menu">
-                        <a href="./examples/landing.html" class="dropdown-item">Landing</a>
-                        <a href="./examples/profile.html" class="dropdown-item">Profile</a>
-                        <a href="./examples/login.html" class="dropdown-item">Login</a>
-                        <a href="./examples/register.html" class="dropdown-item">Register</a>
-                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" href="#">
+                        <i class="ni ni-ui-04 d-lg-none"></i>
+                        <span class="nav-link-inner--text">{{ __('website.contact') }}</span>
+                    </a>
                 </li>
             </ul>
             <ul class="navbar-nav align-items-lg-center ml-lg-auto">
