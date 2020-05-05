@@ -48,6 +48,8 @@
         </svg>
     </div>
 </div>
+
+<contact-component></contact-component>
 @endsection
 
 @section('javascripts')
