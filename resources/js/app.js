@@ -19,6 +19,9 @@ window.Vue = require("vue");
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
+Vue.use(require("vue-cookies"));
+Vue.$cookies.config("7d");
+
 Vue.component(
     "example-component",
     require("./components/ExampleComponent.vue").default
@@ -26,6 +29,14 @@ Vue.component(
 Vue.component(
     "contact-component",
     require("./components/ContactComponent.vue").default
+);
+Vue.component(
+    "header-component",
+    require("./components/HeaderComponent.vue").default
+);
+Vue.component(
+    "dark-mode-button-component",
+    require("./components/DarkModeButtonComponent.vue").default
 );
 
 /**

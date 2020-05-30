@@ -80,7 +80,9 @@
 
 <script>
 export default {
-  props: [],
+  props: [
+    //
+  ],
   data() {
     return {
       isCompleteFormChecked: false,
