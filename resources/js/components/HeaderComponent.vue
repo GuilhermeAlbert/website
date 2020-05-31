@@ -25,7 +25,7 @@
           <div class="row">
             <div class="col-6 collapse-brand">
               <a href="#">
-                <img src="img/brand/ga-mono.png" />
+                <img src="img/brand/ga-colored.png" />
               </a>
             </div>
             <div class="col-6 collapse-close">
@@ -48,13 +48,13 @@
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="ni ni-ui-04 d-lg-none"></i>
-              <span class="nav-link-inner--text">website.about</span>
+              <span class="nav-link-inner--text">{{ $t('header.about') }}</span>
             </a>
           </li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link" data-toggle="dropdown" role="button">
               <i class="ni ni-ui-04 d-lg-none"></i>
-              <span class="nav-link-inner--text">website.services</span>
+              <span class="nav-link-inner--text">{{ $t('header.services') }}</span>
             </a>
             <div class="dropdown-menu dropdown-menu-xl">
               <div class="dropdown-menu-inner">
@@ -97,13 +97,13 @@
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="ni ni-collection d-lg-none"></i>
-              <span class="nav-link-inner--text">website.projects</span>
+              <span class="nav-link-inner--text">{{ $t('header.projects') }}</span>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="ni ni-ui-04 d-lg-none"></i>
-              <span class="nav-link-inner--text">website.contact</span>
+              <span class="nav-link-inner--text">{{ $t('header.contact') }}</span>
             </a>
           </li>
         </ul>
@@ -137,10 +137,10 @@
               <span class="btn-inner--icon">
                 <i class="fas fa-coffee"></i>
               </span>
-              <span class="nav-link-inner--text">website.buy_me_a_coffee</span>
+              <span class="nav-link-inner--text">{{ $t('header.buy_me_a_coffee') }}</span>
             </a>
           </li>
-          <!-- <dark-mode-button-component></dark-mode-button-component> -->
+          <dark-mode-button-component v-if="isDarkModeButtonEnabled"></dark-mode-button-component>
         </ul>
       </div>
     </div>
@@ -149,7 +149,7 @@
 
 <script>
 export default {
-  props: ["requestIs"],
+  props: ["requestIs", "isDarkModeButtonEnabled", "isLocaleButtonEnabled"],
   data() {
     return {
       lightThemeEnabled: true,

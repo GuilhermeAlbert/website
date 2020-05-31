@@ -19,6 +19,7 @@ window.Vue = require("vue");
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
+import i18n from "./locales/i18n";
 Vue.use(require("vue-cookies"));
 Vue.$cookies.config("7d");
 
@@ -35,8 +36,16 @@ Vue.component(
     require("./components/HeaderComponent.vue").default
 );
 Vue.component(
+    "footer-component",
+    require("./components/FooterComponent.vue").default
+);
+Vue.component(
     "dark-mode-button-component",
     require("./components/DarkModeButtonComponent.vue").default
+);
+Vue.component(
+    "locale-button-component",
+    require("./components/LocaleButtonComponent.vue").default
 );
 
 /**
@@ -46,5 +55,6 @@ Vue.component(
  */
 
 const app = new Vue({
+    i18n,
     el: "#app"
 });
