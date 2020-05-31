@@ -5,7 +5,10 @@ export default {
         services: "Serviços",
         projects: "Projetos",
         contact: "Contato",
-        buy_me_a_coffee: "Pague-me um café"
+        buy_me_a_coffee: "Pague-me um café",
+        softwareDevelopment: "Desenvolvimento de softwares",
+        design: "Design",
+        consulting: "Consultoria"
     },
     preferences: {
         locale: {

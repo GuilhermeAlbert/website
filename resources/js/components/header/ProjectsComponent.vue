@@ -1,0 +1,15 @@
+<template>
+  <li class="nav-item">
+    <a href="#" class="nav-link">
+      <i class="ni ni-collection d-lg-none"></i>
+      <span class="nav-link-inner--text">{{ $t('header.projects') }}</span>
+    </a>
+  </li>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style>
+</style>

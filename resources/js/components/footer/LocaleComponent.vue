@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import i18n from "../locales/i18n";
+import i18n from "../../locales/i18n";
 
 export default {
   data() {

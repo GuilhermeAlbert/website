@@ -10,7 +10,7 @@
           </div>
         </div>
         <div class="col-md-4">
-          <locale-button-component v-if="isLocaleButtonEnabled"></locale-button-component>
+          <locale-component v-if="isLocaleButtonEnabled"></locale-component>
         </div>
       </div>
     </div>

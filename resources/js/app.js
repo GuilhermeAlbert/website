@@ -41,11 +41,19 @@ Vue.component(
 );
 Vue.component(
     "dark-mode-button-component",
-    require("./components/DarkModeButtonComponent.vue").default
+    require("./components/header/DarkModeButtonComponent.vue").default
 );
 Vue.component(
-    "locale-button-component",
-    require("./components/LocaleButtonComponent.vue").default
+    "locale-component",
+    require("./components/footer/LocaleComponent.vue").default
+);
+Vue.component(
+    "services-component",
+    require("./components/header/ServicesComponent.vue").default
+);
+Vue.component(
+    "projects-component",
+    require("./components/header/ProjectsComponent.vue").default
 );
 
 /**
