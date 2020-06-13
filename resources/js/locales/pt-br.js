@@ -5,7 +5,7 @@ export default {
         services: "Serviços",
         projects: "Projetos",
         contact: "Contato",
-        buy_me_a_coffee: "Pague-me um café",
+        buyMeACoffee: "Pague-me um café",
         softwareDevelopment: "Desenvolvimento de softwares",
         design: "Design",
         consulting: "Consultoria"
@@ -17,6 +17,7 @@ export default {
         }
     },
     website: {
-        making_some_changes: "Fazendo algumas mudanças."
+        makingSomeChanges: "Fazendo algumas mudanças.",
+        poweredBy: "Feito por"
     }
 };

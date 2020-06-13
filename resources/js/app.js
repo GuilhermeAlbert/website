@@ -55,6 +55,10 @@ Vue.component(
     "projects-component",
     require("./components/header/ProjectsComponent.vue").default
 );
+Vue.component(
+    "welcome-component",
+    require("./components/WelcomeComponent.vue").default
+);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

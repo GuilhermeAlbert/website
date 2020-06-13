@@ -1,5 +1,5 @@
 <template>
-  <li class="nav-item dropdown">
+  <li class="nav-item dropdown" v-if="show">
     <a href="#" class="nav-link" data-toggle="dropdown" role="button">
       <i class="ni ni-ui-04 d-lg-none"></i>
       <span class="nav-link-inner--text">{{ $t('header.services') }}</span>
@@ -45,7 +45,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  //
+};
 </script>
 
 <style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="section pb-0 section-components">
+  <div class="section pb-0 section-components" v-if="show">
     <div class="container mb-5">
       <!-- Inputs -->
       <h3 class="h4 text-success font-weight-bold mb-4">Contact</h3>

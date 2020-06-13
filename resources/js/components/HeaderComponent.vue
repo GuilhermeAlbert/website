@@ -5,7 +5,7 @@
     :class="{'navbar-transparent': !nightMode, 'navbar-default bg-default': nightMode}"
   >
     <div class="container">
-      <a class="navbar-brand mr-lg-5" href="/">
+      <a class="navbar-brand mr-lg-5" v-if="show" href="/">
         <img v-if="requestIs" src="img/brand/ga-mono.png" />
         <img v-else src="img/brand/ga-colored.png" />
       </a>
@@ -45,39 +45,28 @@
           </div>
         </div>
         <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="ni ni-ui-04 d-lg-none"></i>
-              <span class="nav-link-inner--text">{{ $t('header.about') }}</span>
-            </a>
-          </li>
-          <services-component></services-component>
-          <projects-component></projects-component>
+          <!-- <li class="nav-item"> -->
+          <!-- <a href="#" class="nav-link"> -->
+          <!-- <i class="ni ni-ui-04 d-lg-none"></i> -->
+          <!-- <span class="nav-link-inner--text">{{ $t('header.about') }}</span> -->
+          <!-- </a> -->
+          <!-- </li> -->
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="ni ni-ui-04 d-lg-none"></i>
-              <span class="nav-link-inner--text">{{ $t('header.contact') }}</span>
-            </a>
-          </li>
+          <services-component :show="true"></services-component>
+          <projects-component :show="true"></projects-component>
+
+          <!-- <li class="nav-item"> -->
+          <!-- <a href="#" class="nav-link"> -->
+          <!-- <i class="ni ni-ui-04 d-lg-none"></i> -->
+          <!-- <span class="nav-link-inner--text">{{ $t('header.contact') }}</span> -->
+          <!-- </a> -->
+          <!-- </li> -->
         </ul>
         <ul class="navbar-nav align-items-lg-center ml-lg-auto">
           <li class="nav-item">
             <a
               class="nav-link nav-link-icon"
-              href="#"
-              target="_blank"
-              data-toggle="tooltip"
-              title="Follow me on Twitter"
-            >
-              <i class="fa fa-twitter-square"></i>
-              <span class="nav-link-inner--text d-lg-none">Twitter</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link nav-link-icon"
-              href="#"
+              href="https://github.com/GuilhermeAlbert"
               target="_blank"
               data-toggle="tooltip"
               title="Star me on Github"
@@ -91,7 +80,7 @@
               <span class="btn-inner--icon">
                 <i class="fas fa-coffee"></i>
               </span>
-              <span class="nav-link-inner--text">{{ $t('header.buy_me_a_coffee') }}</span>
+              <span class="nav-link-inner--text">{{ $t('header.buyMeACoffee') }}</span>
             </a>
           </li>
           <dark-mode-button-component v-if="isDarkModeButtonEnabled"></dark-mode-button-component>
@@ -119,15 +108,15 @@ export default {
   created() {
     this.nightMode = JSON.parse(localStorage.getItem("nightMode"));
 
-    // let darkMode = localStorage.getItem("dark_mode");
+    let darkMode = localStorage.getItem("dark_mode");
 
-    // console.log(darkMode);
+    console.log(darkMode);
 
-    // this.darkThemeEnabled = !this.darkThemeEnabled;
-    // this.lightThemeEnabled = !this.lightThemeEnabled;
+    this.darkThemeEnabled = !this.darkThemeEnabled;
+    this.lightThemeEnabled = !this.lightThemeEnabled;
   }
 };
 </script>
 
-<style>
+<style scoped>
 </style>

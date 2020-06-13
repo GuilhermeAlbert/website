@@ -6,7 +6,7 @@
         <div class="col-md-8">
           <div class="copyright">
             &copy;
-            <a href="#">{{ $t('author') }}</a>
+            <a href="#">{{ $t('author') }}. {{ $t('website.poweredBy') }} Trebla Labs.</a>
           </div>
         </div>
         <div class="col-md-4">
