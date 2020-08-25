@@ -60,6 +60,11 @@ Vue.component(
     require("./components/WelcomeComponent.vue").default
 );
 
+Vue.component(
+    "admin-update-settings-component",
+    require("./components/admin/UpdateSettingsComponent.vue").default
+);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -68,5 +73,5 @@ Vue.component(
 
 const app = new Vue({
     i18n,
-    el: "#app"
+    el: "#app",
 });
