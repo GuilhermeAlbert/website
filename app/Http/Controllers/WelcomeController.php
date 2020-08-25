@@ -8,10 +8,10 @@ class WelcomeController extends Controller
 {
     /**
      * Returns the welcome view
-     * 
-     * @return view
+     * @param Request $request
+     * @return View
      */
-    public function list()
+    public function list(Request $request)
     {
         return view('welcome');
     }

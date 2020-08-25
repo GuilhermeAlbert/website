@@ -76,7 +76,11 @@
             </a>
           </li>
           <li class="nav-item d-none d-lg-block ml-lg-4">
-            <a href="#" target="_blank" class="btn btn-neutral btn-icon">
+            <a
+              href="https://www.buymeacoffee.com/guilhermealbert"
+              target="_blank"
+              class="btn btn-neutral btn-icon"
+            >
               <span class="btn-inner--icon">
                 <i class="fas fa-coffee"></i>
               </span>
@@ -97,13 +101,13 @@ export default {
     return {
       lightThemeEnabled: true,
       darkThemeEnabled: false,
-      nightMode: false
+      nightMode: false,
     };
   },
   watch: {
-    nightMode: function() {
+    nightMode: function () {
       localStorage.setItem("nightMode", JSON.stringify(this.nightMode));
-    }
+    },
   },
   created() {
     this.nightMode = JSON.parse(localStorage.getItem("nightMode"));
@@ -114,7 +118,7 @@ export default {
 
     this.darkThemeEnabled = !this.darkThemeEnabled;
     this.lightThemeEnabled = !this.lightThemeEnabled;
-  }
+  },
 };
 </script>
 
