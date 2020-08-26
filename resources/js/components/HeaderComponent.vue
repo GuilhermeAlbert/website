@@ -52,8 +52,8 @@
           <!-- </a> -->
           <!-- </li> -->
 
-          <services-component :show="true"></services-component>
-          <projects-component :show="true"></projects-component>
+          <services-component :show="show"></services-component>
+          <projects-component :show="show"></projects-component>
 
           <!-- <li class="nav-item"> -->
           <!-- <a href="#" class="nav-link"> -->
@@ -99,6 +99,7 @@ export default {
   props: ["requestIs", "isDarkModeButtonEnabled", "isLocaleButtonEnabled"],
   data() {
     return {
+      show: false,
       lightThemeEnabled: true,
       darkThemeEnabled: false,
       nightMode: false,
@@ -113,8 +114,6 @@ export default {
     this.nightMode = JSON.parse(localStorage.getItem("nightMode"));
 
     let darkMode = localStorage.getItem("dark_mode");
-
-    console.log(darkMode);
 
     this.darkThemeEnabled = !this.darkThemeEnabled;
     this.lightThemeEnabled = !this.lightThemeEnabled;

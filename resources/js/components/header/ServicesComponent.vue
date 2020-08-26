@@ -46,7 +46,7 @@
 
 <script>
 export default {
-  //
+  props: ["show"],
 };
 </script>
 

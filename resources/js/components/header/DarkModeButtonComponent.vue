@@ -21,14 +21,14 @@ export default {
   data() {
     return {
       isDarkModeEnabled: false,
-      nightMode: false
+      nightMode: false,
     };
   },
   watch: {
-    nightMode: function() {
+    nightMode: function () {
       localStorage.setItem("nightMode", JSON.stringify(this.nightMode));
       location.reload();
-    }
+    },
   },
   methods: {
     handleDarkMode() {
@@ -42,8 +42,8 @@ export default {
       }
 
       location.reload();
-    }
-  }
+    },
+  },
 };
 </script>
 

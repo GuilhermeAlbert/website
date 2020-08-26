@@ -13,6 +13,8 @@ class WelcomeController extends Controller
      */
     public function list(Request $request)
     {
-        return view('welcome');
+        $requestIs = $request->is('/');
+
+        return view('welcome', ['requestIs' => $requestIs]);
     }
 }

@@ -11,8 +11,10 @@ class ElementController extends Controller
      * 
      * @return view
      */
-    public function list()
+    public function list(Request $request)
     {
-        return view('elements');
+        $requestIs = $request->is('/');
+
+        return view('elements', ['requestIs' => $requestIs]);
     }
 }

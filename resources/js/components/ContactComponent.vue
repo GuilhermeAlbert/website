@@ -80,9 +80,7 @@
 
 <script>
 export default {
-  props: [
-    //
-  ],
+  props: ["show"],
   data() {
     return {
       isCompleteFormChecked: false,
@@ -91,7 +89,7 @@ export default {
         name: "",
         email: "",
         toggleSlider: "",
-        phone: ""
+        phone: "",
       },
       validation: {
         isValidName: false,
@@ -101,8 +99,8 @@ export default {
         isValidPhone: false,
         hasErrorPhone: false,
         isValidDescription: false,
-        hasErrorDescription: false
-      }
+        hasErrorDescription: false,
+      },
     };
   },
   methods: {
@@ -110,7 +108,7 @@ export default {
       try {
         await update();
       } catch (error) {
-        console.log(error);
+        console.error(error);
       }
     },
     update(data) {
@@ -120,15 +118,14 @@ export default {
       let isSliderTogged = this.model.toggleSlider;
 
       this.isCompleteFormChecked = !isSliderTogged;
-    }
+    },
   },
   mounted() {
-    console.log("Component mounted.");
+    //
   },
   created() {
-    console.log("Component created.");
-    // this.selected = this.preference.value
-  }
+    //
+  },
 };
 </script>
 
