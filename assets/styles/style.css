@@ -1,0 +1,13 @@
+:root {
+  color-scheme: dark;
+}
+
+.serif {
+  font-family: "EB Garamond", serif;
+}
+
+.sans {
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+}

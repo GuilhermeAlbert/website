@@ -1,17 +1,407 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="favicon.ico" />
-    <title>Pixel</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Guilherme Albert — Tech Lead & Full Stack</title>
+    <meta
+      name="description"
+      content="Tech Leader & Full Stack Engineer. Product-minded, hands-on, and entrepreneur in digital marketing, software and investments."
+    />
+    <meta
+      property="og:title"
+      content="Guilherme Albert — Tech Lead & Full Stack"
+    />
+    <meta
+      property="og:description"
+      content="Tech Leader & Full Stack Engineer. Product-minded, hands-on, and entrepreneur in digital marketing, software and investments."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1600&auto=format&fit=crop"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='black'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Inter' font-size='28' fill='white'>GA</text></svg>"
+    />
+
+    <link rel="stylesheet" href="/assets/styles/style.css" />
   </head>
 
-  <body>
-    <div id="root" class="root">
-      <div class="pixel"></div>
-    </div>
+  <body
+    class="h-full bg-black text-zinc-300 sans antialiased selection:bg-white/10 selection:text-white"
+  >
+    <header
+      class="sticky top-0 z-40 backdrop-blur bg-black/10 border-b border-white/5"
+    >
+      <div
+        class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between"
+      >
+        <a href="#top" class="flex items-center gap-3">
+          <div
+            class="size-8 rounded-full bg-white/5 ring-1 ring-white/10 flex items-center justify-center"
+          >
+            <span class="text-xs font-semibold tracking-wider">GA</span>
+          </div>
+          <span class="text-sm tracking-wide text-zinc-300"
+            >Guilherme Albert</span
+          >
+        </a>
+
+        <nav class="flex items-center gap-4 sm:gap-6 text-sm">
+          <a
+            href="https://www.linkedin.com/in/guilhermealbert"
+            target="_blank"
+            rel="noopener"
+            class="hover:opacity-80"
+            >LinkedIn</a
+          >
+          <a
+            href="https://github.com/GuilhermeAlbert"
+            target="_blank"
+            rel="noopener"
+            class="hover:opacity-80"
+            >GitHub</a
+          >
+          <a href="#contact" class="hover:opacity-80">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="relative">
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-emerald-500/10 via-cyan-400/5 to-transparent"
+      ></div>
+      <div class="mx-auto relative">
+        <figure class="relative py-16 sm:py-24">
+          <div class="w-full flex items-center justify-center">
+            <img
+              src="https://github.com/GuilhermeAlbert.png?size=400"
+              alt="Guilherme Albert avatar"
+              class="w-40 h-40 sm:w-52 sm:h-52 rounded-full ring-2 ring-white/20 shadow-xl object-cover"
+              loading="eager"
+              draggable="false"
+            />
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <main class="mx-auto max-w-4xl px-4">
+      <h1 class="serif text-zinc-100 text-3xl sm:text-4xl mt-10">
+        Tech Leadership, Product & Engineering
+      </h1>
+
+      <div
+        class="prose prose-invert prose-zinc max-w-none mt-6 leading-relaxed"
+      >
+        <p>
+          I'm a <strong>Tech Leader &amp; Full Stack Engineer</strong> building
+          impactful solutions across web and mobile platforms. I combine
+          <strong>technical expertise, product vision, and leadership</strong>,
+          while also
+          <strong
+            >entrepreneuring in digital marketing, software, and
+            investments</strong
+          >.
+        </p>
+      </div>
+
+      <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-sm">
+        <li>📍 Based in Brazil 🇧🇷</li>
+        <li>🌎 Portuguese &amp; English</li>
+        <li>
+          💼 Currently at
+          <a
+            class="underline decoration-white/20 hover:decoration-white"
+            href="https://ailu.com.br/home"
+            target="_blank"
+            rel="noopener"
+            >Ailu</a
+          >
+        </li>
+        <li>
+          🎵 Multi‑instrumentalist: guitar, bass, harmonica, drums, cavaquinho,
+          ukulele, bandolin, learning piano
+        </li>
+        <li>🏐 I love cooking, reading, volleyball &amp; new sports</li>
+        <li>🎮 Retro gaming enthusiast</li>
+      </ul>
+
+      <section class="mx-auto max-w-6xl mt-12">
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="rounded-2xl bg-white/5 ring-1 ring-white/10 p-6">
+            <h3 class="serif text-xl text-white">Product‑Minded Engineering</h3>
+            <p class="mt-2 text-sm text-zinc-400">
+              End‑to‑end delivery with performance, security, and observability.
+            </p>
+          </article>
+          <article class="rounded-2xl bg-white/5 ring-1 ring-white/10 p-6">
+            <h3 class="serif text-xl text-white">Leadership</h3>
+            <p class="mt-2 text-sm text-zinc-400">
+              Team guidance, code quality, architecture, and measurable
+              outcomes.
+            </p>
+          </article>
+          <article class="rounded-2xl bg-white/5 ring-1 ring-white/10 p-6">
+            <h3 class="serif text-xl text-white">Research</h3>
+            <p class="mt-2 text-sm text-zinc-400">
+              Blockchain, OpenAI, and AI‑driven experiences shaping next‑gen
+              products.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="mt-16">
+        <h2 class="serif text-2xl text-white">Connect with me</h2>
+        <div class="mt-4 grid gap-3 sm:grid-cols-2">
+          <a
+            class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3 hover:bg-white/[0.07] transition flex items-center gap-3"
+            href="https://www.linkedin.com/in/guilhermealbert"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="w-6 h-6"
+              alt="LinkedIn"
+              src="https://devicon-website.vercel.app/api/linkedin/plain.svg?color=%23FFFFFF"
+            />
+            <span class="text-sm">linkedin.com/in/guilhermealbert</span>
+          </a>
+          <a
+            class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3 hover:bg-white/[0.07] transition flex items-center gap-3"
+            href="https://github.com/GuilhermeAlbert"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="w-6 h-6"
+              alt="GitHub"
+              src="https://devicon-website.vercel.app/api/github/original.svg?color=%23FFFFFF"
+            />
+            <span class="text-sm">github.com/GuilhermeAlbert</span>
+          </a>
+          <a
+            class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3 hover:bg-white/[0.07] transition flex items-center gap-3"
+            href="https://dev.to/guilhermealbert"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="w-6 h-6"
+              alt="Dev.to"
+              src="https://cdn.simpleicons.org/devdotto/ffffff"
+            />
+            <span class="text-sm">dev.to/guilhermealbert</span>
+          </a>
+          <a
+            class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3 hover:bg-white/[0.07] transition flex items-center gap-3"
+            href="https://medium.com/@guilhermealbert"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="w-6 h-6"
+              alt="Medium"
+              src="https://cdn.simpleicons.org/medium/ffffff"
+            />
+            <span class="text-sm">medium.com/@guilhermealbert</span>
+          </a>
+          <a
+            class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3 hover:bg-white/[0.07] transition flex items-center gap-3"
+            href="https://www.tripadvisor.com.br/Profile/GuilhermeAlbert"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="w-6 h-6"
+              alt="Tripadvisor"
+              src="https://cdn.simpleicons.org/tripadvisor/ffffff"
+            />
+            <span class="text-sm"
+              >tripadvisor.com.br/Profile/GuilhermeAlbert</span
+            >
+          </a>
+        </div>
+      </section>
+
+      <section class="mt-16">
+        <h2 class="serif text-2xl text-white">What I Do</h2>
+        <p class="mt-3 text-sm text-zinc-400">
+          I transform complex ideas into user‑friendly solutions, focusing on
+          <strong>scalability</strong>, <strong>security</strong>, and
+          <strong>performance</strong>.
+        </p>
+
+        <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3">
+          <img
+            class="rounded-md ring-1 ring-white/10"
+            alt="Laravel"
+            src="https://img.shields.io/badge/Laravel-%23FF2D20.svg?style=flat&logo=laravel&logoColor=white"
+          />
+          <img
+            class="rounded-md ring-1 ring-white/10"
+            alt="React Native"
+            src="https://img.shields.io/badge/React_Native-%2361DAFB.svg?style=flat&logo=react&logoColor=black"
+          />
+          <img
+            class="rounded-md ring-1 ring-white/10"
+            alt="ReactJS"
+            src="https://img.shields.io/badge/ReactJS-%2361DAFB.svg?style=flat&logo=react&logoColor=black"
+          />
+          <img
+            class="rounded-md ring-1 ring-white/10"
+            alt="TypeScript"
+            src="https://img.shields.io/badge/TypeScript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white"
+          />
+          <img
+            class="rounded-md ring-1 ring-white/10"
+            alt="Next.js"
+            src="https://img.shields.io/badge/Next.js-%23000000.svg?style=flat&logo=next.js&logoColor=white"
+          />
+          <img
+            class="rounded-md ring-1 ring-white/10"
+            alt="PHP"
+            src="https://img.shields.io/badge/PHP-%23777BB4.svg?style=flat&logo=php&logoColor=white"
+          />
+          <img
+            class="rounded-md ring-1 ring-white/10"
+            alt="VueJS"
+            src="https://img.shields.io/badge/VueJS-%234FC08D.svg?style=flat&logo=vue.js&logoColor=white"
+          />
+          <img
+            class="rounded-md ring-1 ring-white/10"
+            alt="NodeJS"
+            src="https://img.shields.io/badge/Node.js-%23339933.svg?style=flat&logo=node.js&logoColor=white"
+          />
+          <img
+            class="rounded-md ring-1 ring-white/10"
+            alt="GraphQL"
+            src="https://img.shields.io/badge/GraphQL-%23E10098.svg?style=flat&logo=graphql&logoColor=white"
+          />
+          <img
+            class="rounded-md ring-1 ring-white/10"
+            alt="Express"
+            src="https://img.shields.io/badge/Express-%23000000.svg?style=flat&logo=express&logoColor=white"
+          />
+          <img
+            class="rounded-md ring-1 ring-white/10"
+            alt="Docker"
+            src="https://img.shields.io/badge/Docker-%232496ED.svg?style=flat&logo=docker&logoColor=white"
+          />
+          <img
+            class="rounded-md ring-1 ring-white/10"
+            alt="Linux"
+            src="https://img.shields.io/badge/Linux-%23FCC624.svg?style=flat&logo=linux&logoColor=black"
+          />
+          <img
+            class="rounded-md ring-1 ring-white/10"
+            alt="AWS"
+            src="https://img.shields.io/badge/AWS-%23232F3E.svg?style=flat&logo=amazon-aws&logoColor=white"
+          />
+          <img
+            class="rounded-md ring-1 ring-white/10"
+            alt="MySQL"
+            src="https://img.shields.io/badge/MySQL-%234479A1.svg?style=flat&logo=mysql&logoColor=white"
+          />
+          <img
+            class="rounded-md ring-1 ring-white/10"
+            alt="Postgres"
+            src="https://img.shields.io/badge/Postgres-%234169E1.svg?style=flat&logo=postgresql&logoColor=white"
+          />
+          <img
+            class="rounded-md ring-1 ring-white/10"
+            alt="MongoDB"
+            src="https://img.shields.io/badge/MongoDB-%2347A248.svg?style=flat&logo=mongodb&logoColor=white"
+          />
+          <img
+            class="rounded-md ring-1 ring-white/10"
+            alt="Redis"
+            src="https://img.shields.io/badge/Redis-%23DC382D.svg?style=flat&logo=redis&logoColor=white"
+          />
+          <img
+            class="rounded-md ring-1 ring-white/10"
+            alt="Firebase"
+            src="https://img.shields.io/badge/Firebase-%23FFCA28.svg?style=flat&logo=firebase&logoColor=black"
+          />
+          <img
+            class="rounded-md ring-1 ring-white/10"
+            alt="Tailwind"
+            src="https://img.shields.io/badge/Tailwind_CSS-%2306B6D4.svg?style=flat&logo=tailwind-css&logoColor=white"
+          />
+          <img
+            class="rounded-md ring-1 ring-white/10"
+            alt="Jest"
+            src="https://img.shields.io/badge/Jest-%23C21325.svg?style=flat&logo=jest&logoColor=white"
+          />
+          <img
+            class="rounded-md ring-1 ring-white/10"
+            alt="Cypress"
+            src="https://img.shields.io/badge/Cypress-%2317202C.svg?style=flat&logo=cypress&logoColor=white"
+          />
+        </div>
+      </section>
+
+      <section class="mt-16">
+        <h2 class="serif text-2xl text-white">Research &amp; Emerging Tech</h2>
+        <p class="mt-3 text-sm text-zinc-400">
+          Alongside production‑ready systems, I'm researching
+          <strong>Blockchain</strong>, <strong>OpenAI</strong>, and
+          <strong>AI‑driven technologies</strong>.
+        </p>
+        <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <img
+            class="rounded-md ring-1 ring-white/10"
+            alt="Blockchain"
+            src="https://img.shields.io/badge/Blockchain-12100E?style=flat&logo=bitcoin&logoColor=white"
+          />
+          <img
+            class="rounded-md ring-1 ring-white/10"
+            alt="AI"
+            src="https://img.shields.io/badge/Artificial_Intelligence-%23000000.svg?style=flat&logo=ai&logoColor=white"
+          />
+          <img
+            class="rounded-md ring-1 ring-white/10"
+            alt="Machine Learning"
+            src="https://img.shields.io/badge/Machine_Learning-102230?style=flat&logo=keras&logoColor=white"
+          />
+          <img
+            class="rounded-md ring-1 ring-white/10"
+            alt="LLMs"
+            src="https://img.shields.io/badge/Large_Language_Models-FF6F00?style=flat&logo=google-cloud&logoColor=white"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-20 sm:mt-28 border-t border-white/10">
+      <div
+        class="mx-auto max-w-6xl px-4 py-10 text-sm text-zinc-400 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between"
+      >
+        <p>
+          © <span id="y">2025</span> Guilherme Albert. Product &amp;
+          Engineering.
+        </p>
+        <a
+          href="#top"
+          class="underline decoration-white/20 hover:decoration-white"
+          >Back to top ↑</a
+        >
+      </div>
+    </footer>
+
+    <script src="assets/scripts/script.js"></script>
   </body>
 </html>
