@@ -5,7 +5,8 @@ import SiteEffects from "@/components/SiteEffects";
 
 export const metadata: Metadata = {
   title: "Guilherme Albert | Tech Lead & Engineer",
-  description: "Tech Leader & Full Stack Engineer. Product-minded, hands-on, and entrepreneur.",
+  description:
+    "Tech Leader & Full Stack Engineer. Product-minded, hands-on, and entrepreneur.",
   openGraph: {
     title: "Guilherme Albert",
     type: "website",
@@ -22,7 +23,11 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap"
           rel="stylesheet"
@@ -32,15 +37,16 @@ export default function RootLayout({
           href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='0' fill='black'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-weight='bold' font-size='32' fill='white'>GA</text></svg>"
         />
       </head>
-      <body
-        className="antialiased selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black bg-white dark:bg-black text-zinc-600 dark:text-zinc-300 transition-colors duration-300"
-      >
+      <body className="antialiased selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black bg-white dark:bg-black text-zinc-600 dark:text-zinc-300 transition-colors duration-300">
         <header
           className="fixed top-0 w-full z-50 backdrop-blur-md bg-white/70 dark:bg-black/70 border-b border-zinc-200 dark:border-white/10 transition-colors duration-300"
           id="navbar"
         >
           <div className="mx-auto max-w-7xl px-6 h-20 flex items-center justify-between">
-            <a href="/" className="flex items-center gap-4 group cursor-pointer">
+            <a
+              href="/"
+              className="flex items-center gap-4 group cursor-pointer"
+            >
               <div className="relative">
                 <div className="absolute inset-0 bg-black dark:bg-white blur-lg opacity-0 group-hover:opacity-10 transition duration-500"></div>
                 <div className="size-8 bg-zinc-100 dark:bg-white/10 border border-zinc-200 dark:border-white/20 flex items-center justify-center text-xs font-mono text-zinc-900 dark:text-white font-bold">
@@ -113,9 +119,7 @@ export default function RootLayout({
           </div>
         </header>
 
-        <main className="relative pt-40 pb-20">
-          {children}
-        </main>
+        <main className="relative pt-40 pb-20">{children}</main>
 
         <footer className="border-t border-zinc-200 dark:border-white/10 bg-zinc-50 dark:bg-black transition-colors duration-300">
           <div className="mx-auto max-w-7xl px-6 py-12 flex flex-col md:flex-row gap-8 items-center justify-between">
