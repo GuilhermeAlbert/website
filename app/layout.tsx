@@ -3,14 +3,70 @@ import "./globals.css";
 import "highlight.js/styles/base16/dracula.css";
 import SiteEffects from "@/components/SiteEffects";
 
+const AUTHOR = "Guilherme Albert";
+
 export const metadata: Metadata = {
-  title: "Guilherme Albert | Tech Lead & Engineer",
+  metadataBase: new URL("https://guilhermealbert.com.br"),
+  title: {
+    default: `${AUTHOR} | Tech Lead & Engineer`,
+    template: `%s | ${AUTHOR}`,
+  },
   description:
-    "Tech Leader & Full Stack Engineer. Product-minded, hands-on, and entrepreneur.",
+    "Tech Leader & Full Stack Engineer. Product-minded, hands-on, and entrepreneur. Exploring the future of software, AI agents, and distributed systems.",
+  keywords: [
+    "Tech Lead",
+    "Full Stack Engineer",
+    "Software Architecture",
+    "React",
+    "Next.js",
+    "Node.js",
+    "AI Agents",
+    "Engineering Leadership",
+    AUTHOR,
+  ],
+  authors: [{ name: AUTHOR, url: "https://guilhermealbert.com.br" }],
+  creator: AUTHOR,
+  publisher: AUTHOR,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
-    title: "Guilherme Albert",
+    title: `${AUTHOR} | Tech Lead & Engineer`,
+    description:
+      "Tech Leader & Full Stack Engineer. Product-minded, hands-on, and entrepreneur.",
+    url: "https://guilhermealbert.com.br",
+    siteName: AUTHOR,
+    locale: "en_US",
     type: "website",
-    images: ["https://github.com/GuilhermeAlbert.png?size=400"],
+    images: [
+      {
+        url: "https://github.com/GuilhermeAlbert.png?size=1200",
+        width: 1200,
+        height: 1200,
+        alt: `${AUTHOR}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${AUTHOR} | Tech Lead & Engineer`,
+    description:
+      "Tech Leader & Full Stack Engineer. Product-minded, hands-on, and entrepreneur.",
+    creator: "@guilhermealbert", // Replace with actual handle if different
+    images: ["https://github.com/GuilhermeAlbert.png?size=1200"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
 

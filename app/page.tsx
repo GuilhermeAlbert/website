@@ -382,34 +382,45 @@ export default function Home() {
             <Link
               key={post.id}
               href={`/blog/${post.id}`}
-              className={`spotlight-card p-6 group rounded-sm block reveal delay-${
+              className={`spotlight-card group rounded-sm flex flex-col h-full overflow-hidden reveal delay-${
                 (index + 1) * 100
               }`}
             >
-              <div className="flex justify-between items-start mb-4">
-                <span className="text-[10px] font-mono text-zinc-400 dark:text-zinc-500 border border-zinc-200 dark:border-white/10 px-2 py-1 rounded-full">
-                  {post.category || "Tech"}
-                </span>
-                <svg
-                  className="w-4 h-4 text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.5"
-                    d="M7 17L17 7M17 7H7M17 7V17"
-                  ></path>
-                </svg>
+              {post.image && (
+                <div className="w-full h-40 overflow-hidden border-b border-zinc-200 dark:border-white/10">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+              )}
+              <div className="p-6 flex flex-col grow">
+                <div className="flex justify-between items-start mb-4">
+                  <span className="text-[10px] font-mono text-zinc-400 dark:text-zinc-500 border border-zinc-200 dark:border-white/10 px-2 py-1 rounded-full">
+                    {post.category || "Tech"}
+                  </span>
+                  <svg
+                    className="w-4 h-4 text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1.5"
+                      d="M7 17L17 7M17 7H7M17 7V17"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 className="font-display text-lg text-zinc-900 dark:text-white mb-2 group-hover:underline decoration-zinc-400 underline-offset-4">
+                  {post.title}
+                </h3>
+                <p className="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed line-clamp-3">
+                  {post.description}
+                </p>
               </div>
-              <h3 className="font-display text-lg text-zinc-900 dark:text-white mb-2 group-hover:underline decoration-zinc-400 underline-offset-4">
-                {post.title}
-              </h3>
-              <p className="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed line-clamp-3">
-                {post.description}
-              </p>
             </Link>
           ))}
         </div>

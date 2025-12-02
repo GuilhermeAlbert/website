@@ -39,27 +39,38 @@ export default function BlogIndex() {
           <Link
             key={post.id}
             href={`/blog/${post.id}`}
-            className="spotlight-card p-8 group rounded-sm block bg-zinc-50 dark:bg-white/5 border border-zinc-200 dark:border-white/10 hover:border-zinc-300 dark:hover:border-white/20 transition-colors reveal active"
+            className="spotlight-card group rounded-sm flex flex-col h-full bg-zinc-50 dark:bg-white/5 border border-zinc-200 dark:border-white/10 hover:border-zinc-300 dark:hover:border-white/20 transition-colors reveal active overflow-hidden"
             style={{ animationDelay: `${index * 100}ms` }}
           >
-            <div className="flex justify-between items-start mb-6">
-              <span className="text-[10px] font-mono text-zinc-400 dark:text-zinc-500 border border-zinc-200 dark:border-white/10 px-2 py-1 rounded-full">
-                {post.category || "Tech"}
-              </span>
-              <span className="text-[10px] font-mono text-zinc-400 dark:text-zinc-500">
-                {new Date(post.date).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "short",
-                  day: "numeric",
-                })}
-              </span>
+            {post.image && (
+              <div className="w-full h-48 overflow-hidden border-b border-zinc-200 dark:border-white/10">
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+            )}
+            <div className="p-8 flex flex-col grow">
+              <div className="flex justify-between items-start mb-6">
+                <span className="text-[10px] font-mono text-zinc-400 dark:text-zinc-500 border border-zinc-200 dark:border-white/10 px-2 py-1 rounded-full">
+                  {post.category || "Tech"}
+                </span>
+                <span className="text-[10px] font-mono text-zinc-400 dark:text-zinc-500">
+                  {new Date(post.date).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                  })}
+                </span>
+              </div>
+              <h2 className="font-display text-xl text-zinc-900 dark:text-white mb-3 group-hover:underline decoration-zinc-400 underline-offset-4">
+                {post.title}
+              </h2>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-3 mb-4">
+                {post.description}
+              </p>
             </div>
-            <h2 className="font-display text-xl text-zinc-900 dark:text-white mb-3 group-hover:underline decoration-zinc-400 underline-offset-4">
-              {post.title}
-            </h2>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-3">
-              {post.description}
-            </p>
           </Link>
         ))}
       </div>

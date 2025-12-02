@@ -1,8 +1,9 @@
 ---
-title: 'AI Agents and the Future of Software: From Imperative to Declarative Systems'
-date: '2025-11-15'
-description: 'A deep exploration of how AI agents are fundamentally changing software architecture, from the ReAct pattern to multi-agent systems, and what this means for the next generation of developers.'
-category: 'AI Engineering'
+title: "AI Agents and the Future of Software: From Imperative to Declarative Systems"
+date: "2025-11-15"
+description: "A deep exploration of how AI agents are fundamentally changing software architecture, from the ReAct pattern to multi-agent systems, and what this means for the next generation of developers."
+category: "AI Engineering"
+image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2560&auto=format&fit=crop"
 ---
 
 We are witnessing the most profound shift in software engineering since the advent of high-level programming languages. For seventy years, we have operated under a simple paradigm: developers write explicit instructions, computers execute them deterministically. Input A + State S = Output B, every single time.
@@ -15,34 +16,34 @@ This isn't just about chatbots. We're talking about software that can debug itse
 
 ## The Fundamental Shift: From Imperative to Agentic
 
-Traditional software is **imperative**: we tell the computer exactly *how* to do something. Every edge case, every failure mode, every validation rule must be explicitly coded.
+Traditional software is **imperative**: we tell the computer exactly _how_ to do something. Every edge case, every failure mode, every validation rule must be explicitly coded.
 
 ```javascript
 // Traditional Imperative Code
 function processOrder(order) {
   if (!order.items || order.items.length === 0) {
-    throw new Error('Order must have items');
+    throw new Error("Order must have items");
   }
-  
+
   if (!order.customerId) {
-    throw new Error('Order must have a customer');
+    throw new Error("Order must have a customer");
   }
-  
+
   const customer = database.getCustomer(order.customerId);
-  
+
   if (!customer) {
-    throw new Error('Customer not found');
+    throw new Error("Customer not found");
   }
-  
+
   if (customer.creditLimit < order.total) {
-    throw new Error('Credit limit exceeded');
+    throw new Error("Credit limit exceeded");
   }
-  
+
   // ... 50 more lines of edge cases
 }
 ```
 
-Agentic software is **declarative**: we tell the system *what* we want, and it figures out *how*.
+Agentic software is **declarative**: we tell the system _what_ we want, and it figures out _how_.
 
 ```javascript
 // Agentic Approach
@@ -52,8 +53,8 @@ const agent = new Agent({
   constraints: [
     "Never process orders over customer credit limit",
     "Always verify inventory before charging",
-    "Notify customer of any issues"
-  ]
+    "Notify customer of any issues",
+  ],
 });
 
 await agent.run(order);
@@ -70,8 +71,8 @@ Previous approaches either had models think without acting (like Chain-of-Though
 Here's a real-world example from LangChain's implementation:
 
 ```javascript
-import { OpenAI } from 'openai';
-import { DynamicTool } from 'langchain/tools';
+import { OpenAI } from "openai";
+import { DynamicTool } from "langchain/tools";
 
 // Define tools the agent can use
 const tools = [
@@ -81,25 +82,27 @@ const tools = [
     func: async (customerId) => {
       const customer = await db.customers.findOne({ id: customerId });
       return JSON.stringify(customer);
-    }
+    },
   }),
   new DynamicTool({
     name: "check_inventory",
-    description: "Check if a product is in stock. Input should be a product ID.",
+    description:
+      "Check if a product is in stock. Input should be a product ID.",
     func: async (productId) => {
       const stock = await db.inventory.getStock(productId);
       return `Product ${productId} has ${stock} units in stock`;
-    }
+    },
   }),
   new DynamicTool({
     name: "send_email",
-    description: "Send an email to a customer. Input should be JSON with 'to' and 'message'.",
+    description:
+      "Send an email to a customer. Input should be JSON with 'to' and 'message'.",
     func: async (input) => {
       const { to, message } = JSON.parse(input);
       await emailService.send({ to, subject: "Order Update", body: message });
       return "Email sent successfully";
-    }
-  })
+    },
+  }),
 ];
 
 // The Agent Loop
@@ -113,47 +116,47 @@ class ReActAgent {
 
   async run(task) {
     let iteration = 0;
-    
+
     while (iteration < this.maxIterations) {
       // 1. THOUGHT: The model reasons about what to do next
       const thought = await this.model.chat([
         { role: "system", content: this.buildSystemPrompt() },
         { role: "user", content: task },
-        ...this.memory
+        ...this.memory,
       ]);
-      
+
       this.memory.push({ role: "assistant", content: thought });
-      
+
       // Check if the agent has finished
       if (this.isComplete(thought)) {
         return this.extractAnswer(thought);
       }
-      
+
       // 2. ACTION: Extract and execute the chosen action
       const action = this.parseAction(thought);
-      
+
       if (action) {
-        const tool = this.tools.find(t => t.name === action.tool);
+        const tool = this.tools.find((t) => t.name === action.tool);
         const observation = await tool.func(action.input);
-        
+
         // 3. OBSERVATION: Feed the result back to the model
-        this.memory.push({ 
-          role: "user", 
-          content: `Observation: ${observation}` 
+        this.memory.push({
+          role: "user",
+          content: `Observation: ${observation}`,
         });
       }
-      
+
       iteration++;
     }
-    
-    throw new Error('Agent exceeded maximum iterations');
+
+    throw new Error("Agent exceeded maximum iterations");
   }
-  
+
   buildSystemPrompt() {
     return `You are an AI agent that solves problems using available tools.
 
 Available tools:
-${this.tools.map(t => `- ${t.name}: ${t.description}`).join('\n')}
+${this.tools.map((t) => `- ${t.name}: ${t.description}`).join("\n")}
 
 Think step by step:
 1. Reason about what information you need
@@ -169,25 +172,25 @@ Action Input: [input for the tool]
 When you have enough information, respond with:
 Final Answer: [your answer]`;
   }
-  
+
   parseAction(thought) {
     const actionMatch = thought.match(/Action: (.+)/);
     const inputMatch = thought.match(/Action Input: (.+)/);
-    
+
     if (actionMatch && inputMatch) {
       return {
         tool: actionMatch[1].trim(),
-        input: inputMatch[1].trim()
+        input: inputMatch[1].trim(),
       };
     }
-    
+
     return null;
   }
-  
+
   isComplete(thought) {
-    return thought.includes('Final Answer:');
+    return thought.includes("Final Answer:");
   }
-  
+
   extractAnswer(thought) {
     const match = thought.match(/Final Answer: (.+)/);
     return match ? match[1] : thought;
@@ -209,26 +212,26 @@ const agents = {
   researcher: new Agent({
     role: "Research specialist",
     goal: "Find relevant information and data",
-    tools: [searchTool, databaseTool, apiTool]
+    tools: [searchTool, databaseTool, apiTool],
   }),
-  
+
   analyst: new Agent({
     role: "Data analyst",
     goal: "Analyze data and extract insights",
-    tools: [calculatorTool, chartTool, statisticsTool]
+    tools: [calculatorTool, chartTool, statisticsTool],
   }),
-  
+
   writer: new Agent({
     role: "Technical writer",
     goal: "Synthesize findings into clear documentation",
-    tools: [markdownTool, diagramTool]
+    tools: [markdownTool, diagramTool],
   }),
-  
+
   critic: new Agent({
     role: "Quality assurance",
     goal: "Review and verify accuracy",
-    tools: [factCheckTool, lintTool]
-  })
+    tools: [factCheckTool, lintTool],
+  }),
 };
 
 // Orchestrator coordinates the team
@@ -240,8 +243,8 @@ const result = await orchestrator.execute({
     { agent: "researcher", task: "Gather all Q4 sales data" },
     { agent: "analyst", task: "Analyze trends and anomalies" },
     { agent: "writer", task: "Create executive summary" },
-    { agent: "critic", task: "Review for accuracy and clarity" }
-  ]
+    { agent: "critic", task: "Review for accuracy and clarity" },
+  ],
 });
 ```
 
@@ -261,17 +264,17 @@ class AgentRouter {
     this.agents = agents;
     this.classifier = new IntentClassifier();
   }
-  
+
   async route(userRequest) {
     const intent = await this.classifier.classify(userRequest);
-    
+
     const agentMapping = {
-      'customer_support': this.agents.support,
-      'technical_issue': this.agents.engineering,
-      'billing_question': this.agents.finance,
-      'feature_request': this.agents.product
+      customer_support: this.agents.support,
+      technical_issue: this.agents.engineering,
+      billing_question: this.agents.finance,
+      feature_request: this.agents.product,
     };
-    
+
     const selectedAgent = agentMapping[intent];
     return await selectedAgent.run(userRequest);
   }
@@ -286,16 +289,18 @@ A senior agent oversees and validates the work of junior agents:
 class SupervisorAgent {
   async supervise(task, juniorAgent) {
     const result = await juniorAgent.run(task);
-    
+
     // Validate the result
     const validation = await this.validate(result);
-    
+
     if (!validation.isValid) {
       // Provide feedback and retry
-      const feedback = `Your answer had issues: ${validation.issues.join(', ')}`;
+      const feedback = `Your answer had issues: ${validation.issues.join(
+        ", "
+      )}`;
       return await juniorAgent.run(task, { feedback });
     }
-    
+
     return result;
   }
 }
@@ -309,18 +314,18 @@ For critical operations, always get human approval:
 class HumanInLoopAgent {
   async run(task) {
     const plan = await this.createPlan(task);
-    
+
     // Present plan to human
     const approval = await this.requestApproval({
       task,
       plan,
-      estimatedRisk: this.assessRisk(plan)
+      estimatedRisk: this.assessRisk(plan),
     });
-    
+
     if (!approval.approved) {
-      return { status: 'rejected', reason: approval.reason };
+      return { status: "rejected", reason: approval.reason };
     }
-    
+
     return await this.executePlan(plan);
   }
 }
@@ -360,21 +365,21 @@ class SecureAgent extends Agent {
     this.outputFilter = new SensitiveDataFilter();
     this.permissions = config.permissions || [];
   }
-  
+
   async run(task) {
     // Sanitize input
     const sanitizedTask = this.sanitizer.clean(task);
-    
+
     // Check if task requires forbidden actions
     if (this.containsForbiddenPatterns(sanitizedTask)) {
-      throw new SecurityError('Task contains forbidden patterns');
+      throw new SecurityError("Task contains forbidden patterns");
     }
-    
+
     // Execute with limited tools
     const result = await super.run(sanitizedTask, {
-      tools: this.filterToolsByPermissions(this.tools)
+      tools: this.filterToolsByPermissions(this.tools),
     });
-    
+
     // Filter output
     return this.outputFilter.clean(result);
   }
@@ -391,18 +396,18 @@ Instead, we use **Evals** (evaluations) - large datasets of test scenarios with 
 // Example Eval Suite
 const evals = [
   {
-    id: 'customer-support-001',
-    input: 'My order #12345 never arrived',
+    id: "customer-support-001",
+    input: "My order #12345 never arrived",
     expectedBehavior: [
-      'checks order status in database',
-      'verifies shipping information',
-      'offers solution (refund or reship)'
+      "checks order status in database",
+      "verifies shipping information",
+      "offers solution (refund or reship)",
     ],
     scoringCriteria: {
       accuracy: 0.4,
       helpfulness: 0.3,
-      efficiency: 0.3
-    }
+      efficiency: 0.3,
+    },
   },
   // ... hundreds more scenarios
 ];
@@ -411,49 +416,49 @@ const evals = [
 class AgentEvaluator {
   async evaluate(agent, evalSuite) {
     const results = [];
-    
+
     for (const test of evalSuite) {
       const startTime = Date.now();
       const result = await agent.run(test.input);
       const executionTime = Date.now() - startTime;
-      
+
       const score = await this.scoreResult({
         input: test.input,
         output: result,
         expected: test.expectedBehavior,
         criteria: test.scoringCriteria,
-        executionTime
+        executionTime,
       });
-      
+
       results.push({ test: test.id, score });
     }
-    
+
     return this.aggregateScores(results);
   }
-  
+
   async scoreResult({ input, output, expected, criteria, executionTime }) {
     // Use another LLM as a judge
     const judge = new GPT4Judge();
-    
+
     const scores = await judge.evaluate({
       prompt: `
         Given this customer support interaction:
         Input: ${input}
         Agent Response: ${output}
-        Expected Behaviors: ${expected.join(', ')}
+        Expected Behaviors: ${expected.join(", ")}
         
         Score each criterion (0-1):
         - Accuracy: Did it understand and address the issue?
         - Helpfulness: Did it provide a useful solution?
         - Efficiency: Was it concise and fast?
       `,
-      criteria
+      criteria,
     });
-    
+
     return {
       ...scores,
       executionTime,
-      passed: scores.overall > 0.7
+      passed: scores.overall > 0.7,
     };
   }
 }
@@ -501,5 +506,5 @@ The question isn't whether this will happen. It's already happening. The questio
 - 📄 [LangChain Documentation](https://python.langchain.com/docs/modules/agents/)
 - 📄 [Microsoft AutoGen Framework](https://microsoft.github.io/autogen/)
 - 🎥 [Andrej Karpathy: State of GPT](https://www.youtube.com/watch?v=bZQun8Y4L2A)
-- 📚 *Building LLM Apps* by Valentine Ogbonnaya
+- 📚 _Building LLM Apps_ by Valentine Ogbonnaya
 - 📊 [OpenAI: Evaluating Language Models](https://cookbook.openai.com/articles/how_to_eval_abstractive_summarization)
