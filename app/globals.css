@@ -1,0 +1,341 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-display: "Space Grotesk", sans-serif;
+
+  --color-border: var(--card-border);
+  --color-surface: var(--card-bg);
+
+  --background-image-grid-pattern: linear-gradient(
+      to right,
+      var(--grid-color) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+}
+
+:root {
+  --bg: #ffffff;
+  --card-bg: #fafafa;
+  --card-border: rgba(0, 0, 0, 0.08);
+  --accent-glow: rgba(0, 0, 0, 0.05);
+  --grid-color: rgba(0, 0, 0, 0.04);
+  color-scheme: light;
+}
+
+html.dark {
+  --bg: #000000;
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --card-border: rgba(255, 255, 255, 0.15);
+  --accent-glow: rgba(255, 255, 255, 0.15);
+  --grid-color: rgba(255, 255, 255, 0.08);
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* background-color handled by Tailwind classes */
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  color: #18181b; /* zinc-900 */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+.dark body {
+  color: #e5e7eb; /* zinc-200 */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+  border-radius: 0;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #333;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1aa;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-100 {
+  transition-delay: 100ms;
+}
+.delay-200 {
+  transition-delay: 200ms;
+}
+.delay-300 {
+  transition-delay: 300ms;
+}
+
+/* Spotlight Effect */
+.spotlight-card {
+  position: relative;
+  background: var(--card-bg);
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+  transition: border-color 0.3s ease;
+}
+
+.spotlight-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    var(--accent-glow),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+
+.spotlight-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    var(--accent-glow),
+    transparent 40%
+  );
+  opacity: 0;
+  z-index: 3;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+.spotlight-card:hover::after {
+  opacity: 1;
+}
+
+/* Glitch Text Animation on Hover */
+@keyframes glitch-anim-1 {
+  0% {
+    clip-path: inset(20% 0 80% 0);
+    transform: translate(-2px, 1px);
+  }
+  20% {
+    clip-path: inset(60% 0 10% 0);
+    transform: translate(2px, -1px);
+  }
+  40% {
+    clip-path: inset(40% 0 50% 0);
+    transform: translate(-2px, 2px);
+  }
+  60% {
+    clip-path: inset(80% 0 5% 0);
+    transform: translate(2px, -2px);
+  }
+  80% {
+    clip-path: inset(10% 0 70% 0);
+    transform: translate(-1px, 1px);
+  }
+  100% {
+    clip-path: inset(30% 0 50% 0);
+    transform: translate(1px, -1px);
+  }
+}
+
+.glitch-hover:hover {
+  animation: glitch-anim-1 0.3s infinite linear alternate-reverse;
+  color: #000;
+  text-shadow: 2px 0 #ff00c1, -2px 0 #00fff9;
+}
+
+.dark .glitch-hover:hover {
+  color: #fff;
+}
+
+/* Markdown Styles */
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.9em;
+}
+
+.prose th {
+  background-color: var(--card-bg);
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 2px solid var(--card-border);
+  font-weight: 600;
+}
+
+.prose td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--card-border);
+}
+
+/* Inline Code */
+.prose :not(pre) > code {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: #c026d3; /* Fuchsia-600 */
+  font-weight: 500;
+}
+
+.dark .prose :not(pre) > code {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #e879f9; /* Fuchsia-400 */
+}
+
+/* GitHub Alerts */
+.markdown-alert {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid;
+  border-radius: 0.5rem;
+  background-color: var(--card-bg);
+}
+
+.markdown-alert-title {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.95em;
+}
+
+.markdown-alert-title svg {
+  margin-right: 0.5rem;
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.markdown-alert-note {
+  border-color: #0969da;
+  background-color: rgba(9, 105, 218, 0.05);
+}
+.markdown-alert-note .markdown-alert-title {
+  color: #0969da;
+}
+
+.markdown-alert-tip {
+  border-color: #1a7f37;
+  background-color: rgba(26, 127, 55, 0.05);
+}
+.markdown-alert-tip .markdown-alert-title {
+  color: #1a7f37;
+}
+
+.markdown-alert-important {
+  border-color: #8250df;
+  background-color: rgba(130, 80, 223, 0.05);
+}
+.markdown-alert-important .markdown-alert-title {
+  color: #8250df;
+}
+
+.markdown-alert-warning {
+  border-color: #9a6700;
+  background-color: rgba(154, 103, 0, 0.05);
+}
+.markdown-alert-warning .markdown-alert-title {
+  color: #9a6700;
+}
+
+.markdown-alert-caution {
+  border-color: #d1242f;
+  background-color: rgba(209, 36, 47, 0.05);
+}
+.markdown-alert-caution .markdown-alert-title {
+  color: #d1242f;
+}
+
+/* Dark mode adjustments for alerts */
+.dark .markdown-alert-note {
+  border-color: #2f81f7;
+  background-color: rgba(47, 129, 247, 0.1);
+}
+.dark .markdown-alert-note .markdown-alert-title {
+  color: #2f81f7;
+}
+
+.dark .markdown-alert-tip {
+  border-color: #3fb950;
+  background-color: rgba(63, 185, 80, 0.1);
+}
+.dark .markdown-alert-tip .markdown-alert-title {
+  color: #3fb950;
+}
+
+.dark .markdown-alert-important {
+  border-color: #a371f7;
+  background-color: rgba(163, 113, 247, 0.1);
+}
+.dark .markdown-alert-important .markdown-alert-title {
+  color: #a371f7;
+}
+
+.dark .markdown-alert-warning {
+  border-color: #d29922;
+  background-color: rgba(210, 153, 34, 0.1);
+}
+.dark .markdown-alert-warning .markdown-alert-title {
+  color: #d29922;
+}
+
+.dark .markdown-alert-caution {
+  border-color: #f85149;
+  background-color: rgba(248, 81, 73, 0.1);
+}
+.dark .markdown-alert-caution .markdown-alert-title {
+  color: #f85149;
+}
+
+/* Mermaid Diagrams */
+.mermaid {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
