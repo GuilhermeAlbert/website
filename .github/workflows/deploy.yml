@@ -34,4 +34,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./out/
-          server-dir: ./public_html/ # Pasta onde o site deve ficar na Hostinger (geralmente public_html)
+          server-dir: ./domains/guilhermealbert.com.br/public_html/
