@@ -181,3 +181,108 @@ body {
 .dark .glitch-hover:hover {
   color: #fff;
 }
+
+/* Markdown Styles */
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.9em;
+}
+
+.prose th {
+  background-color: var(--card-bg);
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 2px solid var(--card-border);
+  font-weight: 600;
+}
+
+.prose td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--card-border);
+}
+
+/* Inline Code */
+.prose :not(pre) > code {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: #c026d3; /* Fuchsia-600 */
+  font-weight: 500;
+}
+
+.dark .prose :not(pre) > code {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #e879f9; /* Fuchsia-400 */
+}
+
+/* GitHub Alerts */
+.markdown-alert {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid;
+  border-radius: 0.5rem;
+  background-color: var(--card-bg);
+}
+
+.markdown-alert-title {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.95em;
+}
+
+.markdown-alert-title svg {
+  margin-right: 0.5rem;
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.markdown-alert-note { border-color: #0969da; background-color: rgba(9, 105, 218, 0.05); }
+.markdown-alert-note .markdown-alert-title { color: #0969da; }
+
+.markdown-alert-tip { border-color: #1a7f37; background-color: rgba(26, 127, 55, 0.05); }
+.markdown-alert-tip .markdown-alert-title { color: #1a7f37; }
+
+.markdown-alert-important { border-color: #8250df; background-color: rgba(130, 80, 223, 0.05); }
+.markdown-alert-important .markdown-alert-title { color: #8250df; }
+
+.markdown-alert-warning { border-color: #9a6700; background-color: rgba(154, 103, 0, 0.05); }
+.markdown-alert-warning .markdown-alert-title { color: #9a6700; }
+
+.markdown-alert-caution { border-color: #d1242f; background-color: rgba(209, 36, 47, 0.05); }
+.markdown-alert-caution .markdown-alert-title { color: #d1242f; }
+
+/* Dark mode adjustments for alerts */
+.dark .markdown-alert-note { border-color: #2f81f7; background-color: rgba(47, 129, 247, 0.1); }
+.dark .markdown-alert-note .markdown-alert-title { color: #2f81f7; }
+
+.dark .markdown-alert-tip { border-color: #3fb950; background-color: rgba(63, 185, 80, 0.1); }
+.dark .markdown-alert-tip .markdown-alert-title { color: #3fb950; }
+
+.dark .markdown-alert-important { border-color: #a371f7; background-color: rgba(163, 113, 247, 0.1); }
+.dark .markdown-alert-important .markdown-alert-title { color: #a371f7; }
+
+.dark .markdown-alert-warning { border-color: #d29922; background-color: rgba(210, 153, 34, 0.1); }
+.dark .markdown-alert-warning .markdown-alert-title { color: #d29922; }
+
+.dark .markdown-alert-caution { border-color: #f85149; background-color: rgba(248, 81, 73, 0.1); }
+.dark .markdown-alert-caution .markdown-alert-title { color: #f85149; }
+
+/* Mermaid Diagrams */
+.mermaid {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+
+

@@ -88,6 +88,12 @@ export default function RootLayout({
                 </svg>
               </button>
               <a
+                href="/blog"
+                className="text-xs font-mono text-zinc-500 hover:text-zinc-900 dark:hover:text-white transition-colors uppercase tracking-widest"
+              >
+                [Blog]
+              </a>
+              <a
                 href="https://www.linkedin.com/in/guilhermealbert"
                 target="_blank"
                 rel="noopener"

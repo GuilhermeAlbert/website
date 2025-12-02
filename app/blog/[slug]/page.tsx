@@ -1,5 +1,6 @@
 import { getPostData, getAllPostIds } from '@/lib/posts';
 import Link from 'next/link';
+import Script from 'next/script';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
@@ -94,6 +95,12 @@ export default async function Post({ params }: Props) {
           Back to Home
         </Link>
       </div>
+      <Script type="module" strategy="afterInteractive" id="mermaid-init">
+        {`
+          import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+          mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose' });
+        `}
+      </Script>
     </article>
   );
 }
