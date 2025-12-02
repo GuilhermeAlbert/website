@@ -21,12 +21,32 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${postData.title} | Guilherme Albert`,
+    title: postData.title,
     description: postData.description,
     openGraph: {
       title: postData.title,
+      description: postData.description,
       type: "article",
-      images: ["https://github.com/GuilhermeAlbert.png?size=400"],
+      publishedTime: postData.date,
+      authors: ["Guilherme Albert"],
+      images: [
+        {
+          url:
+            postData.image ||
+            "https://github.com/GuilhermeAlbert.png?size=1200",
+          width: 1200,
+          height: 630,
+          alt: postData.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: postData.title,
+      description: postData.description,
+      images: [
+        postData.image || "https://github.com/GuilhermeAlbert.png?size=1200",
+      ],
     },
   };
 }
@@ -64,9 +84,18 @@ export default async function Post({ params }: Props) {
         <h1 className="font-display text-4xl sm:text-5xl font-bold text-zinc-900 dark:text-white mb-6 leading-tight">
           {postData.title}
         </h1>
-        <p className="text-xl text-zinc-600 dark:text-zinc-400 font-light leading-relaxed">
+        <p className="text-xl text-zinc-600 dark:text-zinc-400 font-light leading-relaxed mb-8">
           {postData.description}
         </p>
+        {postData.image && (
+          <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-zinc-200 dark:border-white/10 shadow-lg">
+            <img
+              src={postData.image}
+              alt={postData.title}
+              className="object-cover w-full h-full"
+            />
+          </div>
+        )}
       </header>
 
       <div
